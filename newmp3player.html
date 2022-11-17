@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+</head>
+<body>
+
+<p>Click the button to create two SOURCE elements, and append them to the AUDIO element.</p>
+
+<audio controls id="myAudio" autoplay>
+Your browser does not support the audio tag.
+</audio><br>
+
+<p id="demo"></p>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+  var x = document.createElement("SOURCE");
+  x.setAttribute("src", "./audio/Fizool Hai.mp3");
+  x.setAttribute("type", "audio/mpeg");
+  document.getElementById("myAudio").appendChild(x);
+
+//   var y = document.createElement("SOURCE");
+//   y.setAttribute("src", "./audio/Faizool Hai.ogg");
+//   y.setAttribute("type", "audio/ogg");
+//   document.getElementById("myAudio").appendChild(y);
+///  document.getElementById("demo").innerHTML = "The audio player now works as it should. Press play to listen to the sound of a horse.";
+}
+</script>
+
+</body>
+</html>

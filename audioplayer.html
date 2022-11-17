@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       
+    <div>
+        <h4>My Music player!</h4> 
+            <audio id="audioPlayer" controls>
+                   <source type="audio/mpeg" src="./audio/Fizool Hai.mp3" > 
+            </audio>
+        </br>
+            <button onclick="play1()"> Paly </button>
+            <button onclick="stop1()"> Stop </button>
+            <button onclick="pause1()"> Pause </button>
+            <button onclick="volumeUp()"> VolumUp </button>
+            <button onclick="volumeUp()"> VolumeDown</button>
+    </div>
+    
+    <script>
+        let audipplay=document.getElementById("audioPlayer");
+        function play1() {
+            audipplay.play();
+        }
+        function pause1(){
+            console.log("paused");
+            audipplay.pause();
+        }    
+        function stop1(){
+          //  audipplay.vaule=0;
+            audipplay.pause();
+
+        //    audipplay.stop();
+            audipplay.currentTime=0;
+        }
+
+        function volumeUp(){
+            console.log("volume up");
+            if(audipplay.volume<1){
+            audipplay.volume+=0.1;
+         }else{
+
+         }
+        }
+
+        function volumeUp(){
+            console.log("volume down");
+            if(audipplay.volume>0){
+            audipplay.volume-=0.1;
+         }else{
+
+         }
+        }
+
+
+    </script>
+</body>
+</html>

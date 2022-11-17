@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+        <audio id="audio" controls>
+            <source  src="./audio/Fizool Hai.mp3" type="audio/mpeg"></source>
+
+        </audio>
+    </br>
+    </br>
+    <h3>List Of Song </h3>
+        
+        Fizool Hai   <button id="btn2" value="Fizool Hai"> Fizool Hai </button> 
+        </br>
+        </br>
+        Pehla Pyar   <button id="btn" value="Pehla Pyar"> Pehla Pyar </button>
+        
+    <script>
+        
+        let p=document.getElementsByTagName("Button");
+        
+        for(let i=0;i<p.length;i++){
+            p[i].addEventListener("click",function(event){
+            
+            console.log(event.target.innerText);
+            // var x = document.createElement("SOURCE");
+            // x.setAttribute("src", "./audio/"+event.target.innerText+".mp3");
+            // x.setAttribute("type", "audio/mpeg");
+            document.getElementById("audio").src="./audio/"+event.target.innerText+".mp3";
+            let y=document.getElementById("audio");
+            y.play();
+            });
+
+        }
+        
+
+        
+
+        // p[1].addEventListener("click",function(event){
+        //     p[0].removeEventListener("click",function(event){});
+        //     console.log(event.target.innerText);
+        //     var x=document.createElement("SOURCE");
+        //     x.setAttribute("src","./audio/"+event.target.innerText+".mp3");
+        //     x.setAttribute("type","audio/mpeg");
+        //     document.getElementById("audio").appendChild(x); 
+        //     let y=document.getElementById("audio");
+        //     y.play();
+        
+
+        // });   
+        
+        // function play1(){
+        //     // let z=document.getElementById("audio");
+        //     // z.pause();
+        //     // z.currentTime=0;
+        //    console.log(event.target.innerText);
+        //     var x = document.createElement("SOURCE");
+        //     x.setAttribute("src", "./audio/Fizool Hai.mp3");
+        //     x.setAttribute("type", "audio/mpeg");
+        //     document.getElementById("audio").appendChild(x);
+        //     let y=document.getElementById("audio");
+        //     y.play();
+        // }
+        // function play2(){
+        //     console.log(event.target.innerText);
+        //     var x=document.createElement("SOURCE");
+        //     x.setAttribute("src","./audio/Pehla pyar.mp3");
+        //     x.setAttribute("type","audio/mpeg");
+        //     document.getElementById("audio").appendChild(x); 
+        //     let y=document.getElementById("audio");
+        //     y.play();
+        // }
+
+        
+
+
+
+    </script>
+</body>
+</html>
